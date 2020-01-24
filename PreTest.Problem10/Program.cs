@@ -52,7 +52,13 @@ namespace PreTest.Problem10
 
                 Console.Write("\nWould you like to continue? (y/n) ");
                 userContinue = Console.ReadLine().ToLower();
-                
+
+                while ((userContinue != "y" && userContinue != "yes") && (userContinue != "no" && userContinue != "n"))
+                {
+                    Console.Write("\nInvalid input. Please press y or n: ");
+                    userContinue = Console.ReadLine().ToLower();
+                    
+                }
 
             } while (userContinue == "y" || userContinue == "yes");
 
